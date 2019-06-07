@@ -18,6 +18,7 @@
 		AF89841B22AA089C00753A98 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AF89841A22AA089B00753A98 /* casa.gpx */; };
 		AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841D22AA0AAC00753A98 /* LocationManager.swift */; };
 		AF89842222AA0FF300753A98 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842122AA0FF300753A98 /* AppConfig.swift */; };
+		AF89842422AA11E100753A98 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842322AA11E100753A98 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		AF89841A22AA089B00753A98 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = casa.gpx; sourceTree = "<group>"; };
 		AF89841D22AA0AAC00753A98 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AF89842122AA0FF300753A98 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		AF89842322AA11E100753A98 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 			children = (
 				AF89841D22AA0AAC00753A98 /* LocationManager.swift */,
 				AF89842122AA0FF300753A98 /* AppConfig.swift */,
+				AF89842322AA11E100753A98 /* Alarm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			files = (
 				AF89841922AA006800753A98 /* AppDelegate.swift in Sources */,
 				AF89842222AA0FF300753A98 /* AppConfig.swift in Sources */,
+				AF89842422AA11E100753A98 /* Alarm.swift in Sources */,
 				AF89841822AA006800753A98 /* ViewController.swift in Sources */,
 				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
 			);

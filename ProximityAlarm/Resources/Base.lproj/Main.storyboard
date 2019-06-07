@@ -75,6 +75,9 @@
                                     <constraint firstAttribute="width" secondItem="ZrU-d6-rft" secondAttribute="height" multiplier="75:8" id="Lxb-T6-dML"/>
                                 </constraints>
                                 <state key="normal" title="Save Alarm"/>
+                                <connections>
+                                    <action selector="saveAlarmTUI:" destination="S7y-zK-eLr" eventType="touchUpInside" id="7Ca-QU-2bC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

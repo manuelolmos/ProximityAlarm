@@ -17,6 +17,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     weak var delegate: LocationDelegate?
 
+    var currentLocation: CLLocation? {
+        return locationManager.location
+    }
+
     override init() {
         super.init()
         locationManager.delegate = self
