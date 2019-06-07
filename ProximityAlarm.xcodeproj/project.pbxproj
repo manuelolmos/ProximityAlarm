@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77FFFB36D9669034B1C31BE1 /* libPods-ProximityAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */; };
 		AF8983EE22A9FE9100753A98 /* ProximityAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8983ED22A9FE9100753A98 /* ProximityAlarmTests.swift */; };
 		AF8983F922A9FE9100753A98 /* ProximityAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8983F822A9FE9100753A98 /* ProximityAlarmUITests.swift */; };
 		AF89840F22AA003100753A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89840722AA003100753A98 /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A381929D7E0C511B17F66DD /* Pods-ProximityAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.debug.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProximityAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8983D522A9FE9000753A98 /* ProximityAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProximityAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8983E422A9FE9100753A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8983E922A9FE9100753A98 /* ProximityAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProximityAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +50,7 @@
 		AF89840B22AA003100753A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF89841522AA006800753A98 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF89841722AA006800753A98 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FFFB36D9669034B1C31BE1 /* libPods-ProximityAlarm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C15966C90A355A355BB922E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A381929D7E0C511B17F66DD /* Pods-ProximityAlarm.debug.xcconfig */,
+				B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		53F26E319A09D3524224CF4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF8983CC22A9FE9000753A98 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,8 @@
 				AF8983EC22A9FE9100753A98 /* ProximityAlarmTests */,
 				AF8983F722A9FE9100753A98 /* ProximityAlarmUITests */,
 				AF8983D622A9FE9000753A98 /* Products */,
+				0C15966C90A355A355BB922E /* Pods */,
+				53F26E319A09D3524224CF4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF8983FD22A9FE9100753A98 /* Build configuration list for PBXNativeTarget "ProximityAlarm" */;
 			buildPhases = (
+				4AF8B2942DB14F2F69ABE4F2 /* [CP] Check Pods Manifest.lock */,
 				AF8983D122A9FE9000753A98 /* Sources */,
 				AF8983D222A9FE9000753A98 /* Frameworks */,
 				AF8983D322A9FE9000753A98 /* Resources */,
@@ -282,6 +308,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AF8B2942DB14F2F69ABE4F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProximityAlarm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF8983D122A9FE9000753A98 /* Sources */ = {
@@ -462,6 +513,7 @@
 		};
 		AF8983FE22A9FE9100753A98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A381929D7E0C511B17F66DD /* Pods-ProximityAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +532,7 @@
 		};
 		AF8983FF22A9FE9100753A98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

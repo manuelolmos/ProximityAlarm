@@ -7,7 +7,25 @@
 		<key>ProximityAlarm.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AF8983D422A9FE9000753A98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF8983E822A9FE9100753A98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF8983F322A9FE9100753A98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
