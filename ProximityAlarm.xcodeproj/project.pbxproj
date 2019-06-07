@@ -21,6 +21,7 @@
 		AF89842422AA11E100753A98 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842322AA11E100753A98 /* Alarm.swift */; };
 		AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842522AA147E00753A98 /* SoundPlayer.swift */; };
 		AF89842922AA149F00753A98 /* old_school_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF89842822AA149F00753A98 /* old_school_bell.mp3 */; };
+		AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842C22AA15FC00753A98 /* AddressHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		AF89842322AA11E100753A98 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		AF89842522AA147E00753A98 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		AF89842822AA149F00753A98 /* old_school_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = old_school_bell.mp3; sourceTree = "<group>"; };
+		AF89842C22AA15FC00753A98 /* AddressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHelper.swift; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 		AF89840C22AA003100753A98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF89842B22AA15F100753A98 /* Helpers */,
 				AF89841C22AA0A9300753A98 /* Models */,
 				AF89841622AA006800753A98 /* AppDelegate */,
 				AF89841422AA006800753A98 /* ViewControllers */,
@@ -213,6 +216,14 @@
 				AF89842822AA149F00753A98 /* old_school_bell.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		AF89842B22AA15F100753A98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF89842C22AA15FC00753A98 /* AddressHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +407,7 @@
 				AF89842222AA0FF300753A98 /* AppConfig.swift in Sources */,
 				AF89842422AA11E100753A98 /* Alarm.swift in Sources */,
 				AF89841822AA006800753A98 /* ViewController.swift in Sources */,
+				AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */,
 				AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */,
 				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
 			);

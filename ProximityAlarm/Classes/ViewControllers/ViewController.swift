@@ -51,8 +51,8 @@ class ViewController: UIViewController, LocationDelegate {
             let destinationLocation = destination.location else {
                 return
         }
-        // TODO: Parse readable address
-        let message = "Destination: \(destination)\nDistance to trigger alarm: \(distanceToTrigger)"
+        let destinationText = AddressHelper().parseAddress(selectedItem: destination)
+        let message = "Destination: \(destinationText)\nDistance to trigger alarm: \(distanceToTrigger)"
         let alertController = UIAlertController(
             title: "Alarm set",
             message: message,
