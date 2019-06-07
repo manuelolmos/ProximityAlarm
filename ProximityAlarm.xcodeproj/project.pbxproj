@@ -16,6 +16,7 @@
 		AF89841822AA006800753A98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841522AA006800753A98 /* ViewController.swift */; };
 		AF89841922AA006800753A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841722AA006800753A98 /* AppDelegate.swift */; };
 		AF89841B22AA089C00753A98 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AF89841A22AA089B00753A98 /* casa.gpx */; };
+		AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841D22AA0AAC00753A98 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AF89841522AA006800753A98 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF89841722AA006800753A98 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF89841A22AA089B00753A98 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = casa.gpx; sourceTree = "<group>"; };
+		AF89841D22AA0AAC00753A98 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 		AF89840C22AA003100753A98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF89841C22AA0A9300753A98 /* Models */,
 				AF89841622AA006800753A98 /* AppDelegate */,
 				AF89841422AA006800753A98 /* ViewControllers */,
 			);
@@ -182,6 +185,14 @@
 				AF89841722AA006800753A98 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		AF89841C22AA0A9300753A98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF89841D22AA0AAC00753A98 /* LocationManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 			files = (
 				AF89841922AA006800753A98 /* AppDelegate.swift in Sources */,
 				AF89841822AA006800753A98 /* ViewController.swift in Sources */,
+				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
