@@ -15,6 +15,7 @@
 		AF89841122AA003100753A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89840A22AA003100753A98 /* Main.storyboard */; };
 		AF89841822AA006800753A98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841522AA006800753A98 /* ViewController.swift */; };
 		AF89841922AA006800753A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841722AA006800753A98 /* AppDelegate.swift */; };
+		AF89841B22AA089C00753A98 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AF89841A22AA089B00753A98 /* casa.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		AF89840B22AA003100753A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF89841522AA006800753A98 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF89841722AA006800753A98 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF89841A22AA089B00753A98 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = casa.gpx; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +87,6 @@
 				1A381929D7E0C511B17F66DD /* Pods-ProximityAlarm.debug.xcconfig */,
 				B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +151,7 @@
 		AF89840622AA003100753A98 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF89841A22AA089B00753A98 /* casa.gpx */,
 				AF89840722AA003100753A98 /* Assets.xcassets */,
 				AF89840822AA003100753A98 /* LaunchScreen.storyboard */,
 				AF89840A22AA003100753A98 /* Main.storyboard */,
@@ -288,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF89841122AA003100753A98 /* Main.storyboard in Resources */,
+				AF89841B22AA089C00753A98 /* casa.gpx in Resources */,
 				AF89840F22AA003100753A98 /* Assets.xcassets in Resources */,
 				AF89841022AA003100753A98 /* LaunchScreen.storyboard in Resources */,
 			);
