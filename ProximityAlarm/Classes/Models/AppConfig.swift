@@ -1,4 +1,3 @@
-
 //
 //  AppConfig.swift
 //  ProximityAlarm
