@@ -38,6 +38,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R0x-cy-cdF">
                                         <rect key="frame" x="94.5" y="61" width="225" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="S7y-zK-eLr" eventType="valueChanged" id="SL0-NK-e7n"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200mts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-on-3ob">
                                         <rect key="frame" x="319.5" y="65.5" width="66" height="21"/>
@@ -91,6 +94,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="twi-cN-IfJ"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="JtO-qo-RqF" id="z6O-Yx-Ldz"/>
+                        <outlet property="finalPositionSliderLabel" destination="8Io-on-3ob" id="cgi-Vc-zEI"/>
+                        <outlet property="initPositionSliderLabel" destination="YhH-XK-Es2" id="Dpl-kx-Cza"/>
                         <outlet property="mapView" destination="aWF-XP-VpH" id="RAu-IY-oPN"/>
                         <outlet property="searchDisplayController" destination="PRw-1I-6VF" id="pia-Xc-khR"/>
                     </connections>
