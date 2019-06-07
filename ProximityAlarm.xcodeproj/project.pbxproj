@@ -19,6 +19,8 @@
 		AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89841D22AA0AAC00753A98 /* LocationManager.swift */; };
 		AF89842222AA0FF300753A98 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842122AA0FF300753A98 /* AppConfig.swift */; };
 		AF89842422AA11E100753A98 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842322AA11E100753A98 /* Alarm.swift */; };
+		AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842522AA147E00753A98 /* SoundPlayer.swift */; };
+		AF89842922AA149F00753A98 /* old_school_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF89842822AA149F00753A98 /* old_school_bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		AF89841D22AA0AAC00753A98 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AF89842122AA0FF300753A98 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AF89842322AA11E100753A98 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		AF89842522AA147E00753A98 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		AF89842822AA149F00753A98 /* old_school_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = old_school_bell.mp3; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 		AF89840622AA003100753A98 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF89842722AA149F00753A98 /* Sounds */,
 				AF89841A22AA089B00753A98 /* casa.gpx */,
 				AF89840722AA003100753A98 /* Assets.xcassets */,
 				AF89840822AA003100753A98 /* LaunchScreen.storyboard */,
@@ -197,8 +202,17 @@
 				AF89841D22AA0AAC00753A98 /* LocationManager.swift */,
 				AF89842122AA0FF300753A98 /* AppConfig.swift */,
 				AF89842322AA11E100753A98 /* Alarm.swift */,
+				AF89842522AA147E00753A98 /* SoundPlayer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AF89842722AA149F00753A98 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AF89842822AA149F00753A98 /* old_school_bell.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +226,7 @@
 				AF8983D122A9FE9000753A98 /* Sources */,
 				AF8983D222A9FE9000753A98 /* Frameworks */,
 				AF8983D322A9FE9000753A98 /* Resources */,
+				AF89842A22AA14C000753A98 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -308,6 +323,7 @@
 			files = (
 				AF89841122AA003100753A98 /* Main.storyboard in Resources */,
 				AF89841B22AA089C00753A98 /* casa.gpx in Resources */,
+				AF89842922AA149F00753A98 /* old_school_bell.mp3 in Resources */,
 				AF89840F22AA003100753A98 /* Assets.xcassets in Resources */,
 				AF89841022AA003100753A98 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -352,6 +368,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF89842A22AA14C000753A98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -363,6 +396,7 @@
 				AF89842222AA0FF300753A98 /* AppConfig.swift in Sources */,
 				AF89842422AA11E100753A98 /* Alarm.swift in Sources */,
 				AF89841822AA006800753A98 /* ViewController.swift in Sources */,
+				AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */,
 				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

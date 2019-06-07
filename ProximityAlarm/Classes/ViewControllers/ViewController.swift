@@ -21,6 +21,7 @@ class ViewController: UIViewController, LocationDelegate {
     private var actualAlarm: Alarm?
     private var locationManager = LocationManager()
     private var destinationPlacemark: MKPlacemark?
+    private var soundPlayer = SoundPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,8 +67,7 @@ class ViewController: UIViewController, LocationDelegate {
 
     private func triggerAlarmIfnecessary(location: CLLocation) {
         if let alarm = actualAlarm, alarm.shouldRing(location: location) {
-            // TODO: Trigger sound
-            // reset alarm
+            soundPlayer.play()
             actualAlarm = nil
         }
     }
