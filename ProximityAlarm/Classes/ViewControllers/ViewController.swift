@@ -27,9 +27,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager = LocationManager()
         locationManager.delegate = self
-        actualAlarm = AlarmManager().restore()
+        restoreAlarmIfNecessary()
         setupUIComponents()
         setupSearchController()
     }
@@ -61,6 +60,22 @@ class ViewController: UIViewController {
         }
     }
 
+    private func restoreAlarmIfNecessary() {
+        guard let alarm = AlarmManager().restore() else {
+            return
+        }
+        actualAlarm = alarm
+        addressSelected(placemark: MKPlacemark(coordinate: alarm.finalDestination.coordinate))
+    }
+
+    private func setupUIComponents() {
+        let triggerDistance = actualAlarm?.triggerDistance ?? distanceToCover*0.5
+        slider.value = triggerDistance/distanceToCover
+        distanceLabel.text = "When to trigger alarm: \(triggerDistance)m"
+        initPositionSliderLabel.text = "\(AppConfig.minDistanceToTrigger)m"
+        finalPositionSliderLabel.text = "\(distanceToCover)m"
+    }
+
     private func setupSearchController() {
         let locationSearchTable = storyboard!.instantiateViewController(
             withIdentifier: "AddressSearchTableVC")
@@ -76,14 +91,6 @@ class ViewController: UIViewController {
         definesPresentationContext = true
         locationSearchTable?.mapView = mapView
         locationSearchTable?.mapSearchDelegate = self
-    }
-
-    private func setupUIComponents() {
-        let triggerDistance = actualAlarm?.triggerDistance ?? distanceToCover*0.5
-        slider.value = triggerDistance/distanceToCover
-        distanceLabel.text = "When to trigger alarm: \(triggerDistance)m"
-        initPositionSliderLabel.text = "\(AppConfig.minDistanceToTrigger)m"
-        finalPositionSliderLabel.text = "\(distanceToCover)m"
     }
 
     private func triggerAlarmIfnecessary(location: CLLocation) {
