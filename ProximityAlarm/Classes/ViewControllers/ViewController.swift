@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var finalPositionSliderLabel: UILabel!
     @IBOutlet weak var initPositionSliderLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
 
     private let distanceToCover: Float = AppConfig.maxDistanceToTrigger
     private var distanceToTrigger: Float = 0.0
@@ -28,9 +29,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         locationManager = LocationManager()
         locationManager.delegate = self
+        actualAlarm = AlarmManager().restore()
         setupUIComponents()
         setupSearchController()
-        actualAlarm = AlarmManager().restore()
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -78,7 +79,9 @@ class ViewController: UIViewController {
     }
 
     private func setupUIComponents() {
-        distanceLabel.text = "When to trigger alarm: \(distanceToCover*0.5)m"
+        let triggerDistance = actualAlarm?.triggerDistance ?? distanceToCover*0.5
+        slider.value = triggerDistance/distanceToCover
+        distanceLabel.text = "When to trigger alarm: \(triggerDistance)m"
         initPositionSliderLabel.text = "\(AppConfig.minDistanceToTrigger)m"
         finalPositionSliderLabel.text = "\(distanceToCover)m"
     }

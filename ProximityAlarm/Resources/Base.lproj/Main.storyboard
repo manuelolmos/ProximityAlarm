@@ -102,6 +102,7 @@
                         <outlet property="initPositionSliderLabel" destination="YhH-XK-Es2" id="Dpl-kx-Cza"/>
                         <outlet property="mapView" destination="aWF-XP-VpH" id="RAu-IY-oPN"/>
                         <outlet property="searchDisplayController" destination="PRw-1I-6VF" id="pia-Xc-khR"/>
+                        <outlet property="slider" destination="R0x-cy-cdF" id="pGx-en-1F7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLa-Fq-69w" userLabel="First Responder" sceneMemberID="firstResponder"/>
