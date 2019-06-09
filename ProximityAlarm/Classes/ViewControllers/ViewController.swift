@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         setupUIComponents()
         setupSearchController()
+        actualAlarm = AlarmManager().restore()
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -51,7 +52,9 @@ class ViewController: UIViewController {
             preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
-        actualAlarm = Alarm(finalDestination: destinationLocation, triggerDistance: distanceToTrigger)
+        let alarm = Alarm(destination: destinationLocation, distance: distanceToTrigger)
+        actualAlarm = alarm
+        AlarmManager().save(alarm)
         if let currentLocation = locationManager.currentLocation {
             triggerAlarmIfnecessary(location: currentLocation)
         }
@@ -83,6 +86,7 @@ class ViewController: UIViewController {
     private func triggerAlarmIfnecessary(location: CLLocation) {
         if let alarm = actualAlarm, alarm.shouldRing(location: location) {
             soundPlayer.play()
+            AlarmManager().delete(alarm)
             actualAlarm = nil
         }
     }

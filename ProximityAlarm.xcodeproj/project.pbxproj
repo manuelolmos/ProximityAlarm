@@ -23,6 +23,7 @@
 		AF89842922AA149F00753A98 /* old_school_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF89842822AA149F00753A98 /* old_school_bell.mp3 */; };
 		AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842C22AA15FC00753A98 /* AddressHelper.swift */; };
 		AF89842F22AB556A00753A98 /* AddressSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842E22AB556A00753A98 /* AddressSearchTableViewController.swift */; };
+		AF89843122AC9BD000753A98 /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89843022AC9BD000753A98 /* AlarmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		AF89842822AA149F00753A98 /* old_school_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = old_school_bell.mp3; sourceTree = "<group>"; };
 		AF89842C22AA15FC00753A98 /* AddressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHelper.swift; sourceTree = "<group>"; };
 		AF89842E22AB556A00753A98 /* AddressSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchTableViewController.swift; sourceTree = "<group>"; };
+		AF89843022AC9BD000753A98 /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 				AF89842122AA0FF300753A98 /* AppConfig.swift */,
 				AF89842322AA11E100753A98 /* Alarm.swift */,
 				AF89842522AA147E00753A98 /* SoundPlayer.swift */,
+				AF89843022AC9BD000753A98 /* AlarmManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */,
 				AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */,
 				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
+				AF89843122AC9BD000753A98 /* AlarmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,25 @@
 import Foundation
 import MapKit
 
-struct Alarm {
-    var finalDestination: CLLocation
+class Alarm: Codable {
+
+    enum Key: String {
+        case alarm
+    }
+
+    private var finalDestinationLongitude: Double
+    private var finalDestinationLatitude: Double
     var triggerDistance: Float
+
+    var finalDestination: CLLocation {
+        return CLLocation(latitude: finalDestinationLatitude, longitude: finalDestinationLongitude)
+    }
+
+    init(destination: CLLocation, distance: Float) {
+        finalDestinationLongitude = destination.coordinate.longitude
+        finalDestinationLatitude = destination.coordinate.latitude
+        triggerDistance = distance
+    }
 
     func shouldRing(location: CLLocation) -> Bool {
         return location.distance(from: finalDestination) < Double(triggerDistance)

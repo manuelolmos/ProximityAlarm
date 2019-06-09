@@ -12,6 +12,7 @@ import MapKit
 protocol LocationDelegate: class {
     func locationDidUpdate(region: MKCoordinateRegion)
 }
+
 class LocationManager: NSObject, CLLocationManagerDelegate {
 
     private let locationManager = CLLocationManager()
