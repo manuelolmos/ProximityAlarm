@@ -55,9 +55,7 @@ class ViewController: UIViewController {
         let alarm = Alarm(destination: destinationLocation, distance: distanceToTrigger)
         actualAlarm = alarm
         AlarmManager().save(alarm)
-        if let currentLocation = locationManager.currentLocation {
-            triggerAlarmIfnecessary(location: currentLocation)
-        }
+        triggerAlarmIfnecessary()
     }
 
     private func restoreAlarmIfNecessary() {
@@ -93,8 +91,12 @@ class ViewController: UIViewController {
         locationSearchTable?.mapSearchDelegate = self
     }
 
-    private func triggerAlarmIfnecessary(location: CLLocation) {
-        if let alarm = actualAlarm, alarm.shouldRing(location: location) {
+    private func triggerAlarmIfnecessary() {
+        guard let currentLocation = locationManager.currentLocation,
+            let alarm = actualAlarm else {
+            return
+        }
+        if alarm.shouldRing(location: currentLocation) {
             soundPlayer.play()
             AlarmManager().delete(alarm)
             actualAlarm = nil
@@ -106,6 +108,7 @@ extension ViewController: LocationDelegate {
 
     func locationDidUpdate(region: MKCoordinateRegion) {
         mapView.setRegion(region, animated: true)
+        triggerAlarmIfnecessary()
     }
 }
 
