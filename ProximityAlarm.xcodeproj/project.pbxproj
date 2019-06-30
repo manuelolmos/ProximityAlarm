@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77FFFB36D9669034B1C31BE1 /* libPods-ProximityAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */; };
+		A4E2F4841676AA6649F2CB18 /* Pods_ProximityAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94771AEDCFBB19FCAD372BE2 /* Pods_ProximityAlarm.framework */; };
 		AF8983EE22A9FE9100753A98 /* ProximityAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8983ED22A9FE9100753A98 /* ProximityAlarmTests.swift */; };
 		AF8983F922A9FE9100753A98 /* ProximityAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8983F822A9FE9100753A98 /* ProximityAlarmUITests.swift */; };
 		AF89840F22AA003100753A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89840722AA003100753A98 /* Assets.xcassets */; };
@@ -24,6 +24,7 @@
 		AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842C22AA15FC00753A98 /* AddressHelper.swift */; };
 		AF89842F22AB556A00753A98 /* AddressSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89842E22AB556A00753A98 /* AddressSearchTableViewController.swift */; };
 		AF89843122AC9BD000753A98 /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89843022AC9BD000753A98 /* AlarmManager.swift */; };
+		AF89844322C887D700753A98 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89844222C887D700753A98 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1A381929D7E0C511B17F66DD /* Pods-ProximityAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.debug.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.debug.xcconfig"; sourceTree = "<group>"; };
-		A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProximityAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94771AEDCFBB19FCAD372BE2 /* Pods_ProximityAlarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProximityAlarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8983D522A9FE9000753A98 /* ProximityAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProximityAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8983E422A9FE9100753A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8983E922A9FE9100753A98 /* ProximityAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProximityAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +69,7 @@
 		AF89842C22AA15FC00753A98 /* AddressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHelper.swift; sourceTree = "<group>"; };
 		AF89842E22AB556A00753A98 /* AddressSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchTableViewController.swift; sourceTree = "<group>"; };
 		AF89843022AC9BD000753A98 /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		AF89844222C887D700753A98 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B65499C310C11746279B5D31 /* Pods-ProximityAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityAlarm.release.xcconfig"; path = "Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77FFFB36D9669034B1C31BE1 /* libPods-ProximityAlarm.a in Frameworks */,
+				A4E2F4841676AA6649F2CB18 /* Pods_ProximityAlarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +111,7 @@
 		53F26E319A09D3524224CF4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A45D93464734D5E88A2559A5 /* libPods-ProximityAlarm.a */,
+				94771AEDCFBB19FCAD372BE2 /* Pods_ProximityAlarm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				AF89842C22AA15FC00753A98 /* AddressHelper.swift */,
+				AF89844222C887D700753A98 /* Logger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 				AF8983D122A9FE9000753A98 /* Sources */,
 				AF8983D222A9FE9000753A98 /* Frameworks */,
 				AF8983D322A9FE9000753A98 /* Resources */,
-				AF89842A22AA14C000753A98 /* ShellScript */,
+				32F129660C6EE360FE3FEB50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,6 +366,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32F129660C6EE360FE3FEB50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProximityAlarm/Pods-ProximityAlarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4AF8B2942DB14F2F69ABE4F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,23 +405,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF89842A22AA14C000753A98 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,6 +417,7 @@
 				AF89842422AA11E100753A98 /* Alarm.swift in Sources */,
 				AF89841822AA006800753A98 /* ViewController.swift in Sources */,
 				AF89842F22AB556A00753A98 /* AddressSearchTableViewController.swift in Sources */,
+				AF89844322C887D700753A98 /* Logger.swift in Sources */,
 				AF89842D22AA15FC00753A98 /* AddressHelper.swift in Sources */,
 				AF89842622AA147E00753A98 /* SoundPlayer.swift in Sources */,
 				AF89841E22AA0AAC00753A98 /* LocationManager.swift in Sources */,
