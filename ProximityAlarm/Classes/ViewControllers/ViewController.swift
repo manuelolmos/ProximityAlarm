@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     private var distanceToTrigger: Float = 0.0
     private var actualAlarm: Alarm?
     private var locationManager = LocationManager()
-    private var destinationPlacemark: MKPlacemark?
+    private var destinationAnnotation: MKAnnotation?
     private var soundPlayer = SoundPlayer()
     private var resultSearchController: UISearchController?
 
@@ -40,12 +40,11 @@ class ViewController: UIViewController {
 
     @IBAction func saveAlarmTUI(_ sender: Any) {
         guard distanceToTrigger > 0.0,
-            let destination = destinationPlacemark,
-            let destinationLocation = destination.location else {
+            let destination = destinationAnnotation,
+            let title = destination.title else {
                 return
         }
-        let destinationAddress = AddressHelper().parseAddress(selectedItem: destination)
-        let alarm = Alarm(destination: destinationLocation, distance: distanceToTrigger, address: destinationAddress)
+        let alarm = Alarm(destination: destination.coordinate, distance: distanceToTrigger, address: title ?? "")
         actualAlarm = alarm
         AlarmManager().save(alarm)
         Logger.shared.log.debug("saveAlarm: \(alarm)")
@@ -74,7 +73,10 @@ class ViewController: UIViewController {
             return
         }
         actualAlarm = alarm
-        addressSelected(placemark: MKPlacemark(coordinate: alarm.finalDestination.coordinate))
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = alarm.finalDestination.coordinate
+        annotation.title = alarm.destinationAddress
+        add(annotation: annotation)
         locationManager.start()
         triggerAlarmIfNecessary()
     }
@@ -127,7 +129,6 @@ extension ViewController: LocationDelegate {
 extension ViewController: MapSearchDelegate {
 
     func addressSelected(placemark: MKPlacemark) {
-        destinationPlacemark = placemark
         mapView.removeAnnotations(mapView.annotations)
         let annotation = MKPointAnnotation()
         annotation.coordinate = placemark.coordinate
@@ -135,9 +136,14 @@ extension ViewController: MapSearchDelegate {
         if let city = placemark.locality, let state = placemark.administrativeArea {
             annotation.subtitle = "\(city) \(state)"
         }
+        destinationAnnotation = annotation
+        add(annotation: annotation)
+    }
+
+    func add(annotation: MKPointAnnotation) {
         mapView.addAnnotation(annotation)
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+        let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
 }

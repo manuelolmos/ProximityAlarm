@@ -24,9 +24,9 @@ class Alarm: NSObject, Codable {
         return CLLocation(latitude: finalDestinationLatitude, longitude: finalDestinationLongitude)
     }
 
-    init(destination: CLLocation, distance: Float, address: String) {
-        finalDestinationLongitude = destination.coordinate.longitude
-        finalDestinationLatitude = destination.coordinate.latitude
+    init(destination: CLLocationCoordinate2D, distance: Float, address: String) {
+        finalDestinationLongitude = destination.longitude
+        finalDestinationLatitude = destination.latitude
         triggerDistance = distance
         destinationAddress = address
     }
