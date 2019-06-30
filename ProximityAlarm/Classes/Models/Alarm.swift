@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class Alarm: Codable {
+class Alarm: NSObject, Codable {
 
     enum Key: String {
         case alarm
@@ -18,15 +18,21 @@ class Alarm: Codable {
     private var finalDestinationLongitude: Double
     private var finalDestinationLatitude: Double
     var triggerDistance: Float
+    var destinationAddress: String
 
     var finalDestination: CLLocation {
         return CLLocation(latitude: finalDestinationLatitude, longitude: finalDestinationLongitude)
     }
 
-    init(destination: CLLocation, distance: Float) {
+    init(destination: CLLocation, distance: Float, address: String) {
         finalDestinationLongitude = destination.coordinate.longitude
         finalDestinationLatitude = destination.coordinate.latitude
         triggerDistance = distance
+        destinationAddress = address
+    }
+
+    override var description: String {
+        return "Destination: \(destinationAddress)\nDistance to trigger alarm: \(triggerDistance)\n"
     }
 
     func distanceToDestination(location: CLLocation) -> CLLocationDistance {

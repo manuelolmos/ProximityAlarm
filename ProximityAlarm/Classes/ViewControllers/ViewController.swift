@@ -44,18 +44,19 @@ class ViewController: UIViewController {
             let destinationLocation = destination.location else {
                 return
         }
-        let destinationText = AddressHelper().parseAddress(selectedItem: destination)
-        let message = "Destination: \(destinationText)\nDistance to trigger alarm: \(distanceToTrigger)"
+        let destinationAddress = AddressHelper().parseAddress(selectedItem: destination)
+        let alarm = Alarm(destination: destinationLocation, distance: distanceToTrigger, address: destinationAddress)
+        actualAlarm = alarm
+        AlarmManager().save(alarm)
+        Logger.shared.log.debug("saveAlarm: \(alarm)")
         let alertController = UIAlertController(
             title: "Alarm set",
-            message: message,
+            message: "\(alarm)",
             preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
-        let alarm = Alarm(destination: destinationLocation, distance: distanceToTrigger)
-        actualAlarm = alarm
-        AlarmManager().save(alarm)
         triggerAlarmIfnecessary()
+        locationManager.start()
     }
 
     private func restoreAlarmIfNecessary() {
