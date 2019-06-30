@@ -70,28 +70,40 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrU-d6-rft">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="207" y="818" width="207" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZrU-d6-rft" secondAttribute="height" multiplier="75:8" id="Lxb-T6-dML"/>
+                                    <constraint firstAttribute="height" constant="44" id="8PO-0l-Wr2"/>
                                 </constraints>
                                 <state key="normal" title="Save Alarm"/>
                                 <connections>
                                     <action selector="saveAlarmTUI:" destination="S7y-zK-eLr" eventType="touchUpInside" id="7Ca-QU-2bC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-dp-ySR">
+                                <rect key="frame" x="0.0" y="818" width="207" height="44"/>
+                                <state key="normal" title="Open Log"/>
+                                <connections>
+                                    <segue destination="0tP-Ez-h0K" kind="show" id="5cZ-Vk-eXw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JwE-dp-ySR" firstAttribute="centerY" secondItem="ZrU-d6-rft" secondAttribute="centerY" id="3mK-23-XfS"/>
+                            <constraint firstItem="ZrU-d6-rft" firstAttribute="leading" secondItem="JwE-dp-ySR" secondAttribute="trailing" id="5rp-Ym-eWJ"/>
                             <constraint firstItem="aWF-XP-VpH" firstAttribute="top" secondItem="gZ1-ZV-kD5" secondAttribute="top" id="AT4-I6-DyK"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="lad-MQ-aag" secondAttribute="trailing" id="Bsl-Ue-EhI"/>
-                            <constraint firstItem="ZrU-d6-rft" firstAttribute="centerX" secondItem="gZ1-ZV-kD5" secondAttribute="centerX" id="DBP-cN-twc"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="aWF-XP-VpH" secondAttribute="trailing" id="E03-xz-0If"/>
                             <constraint firstItem="aWF-XP-VpH" firstAttribute="leading" secondItem="gZ1-ZV-kD5" secondAttribute="leading" id="MfC-DH-XIp"/>
                             <constraint firstItem="ZrU-d6-rft" firstAttribute="top" secondItem="lad-MQ-aag" secondAttribute="bottom" id="Oyq-RU-Ww1"/>
                             <constraint firstItem="aWF-XP-VpH" firstAttribute="bottom" secondItem="lad-MQ-aag" secondAttribute="top" id="QcW-52-gzY"/>
                             <constraint firstItem="lad-MQ-aag" firstAttribute="leading" secondItem="gZ1-ZV-kD5" secondAttribute="leading" id="SFN-WL-6qm"/>
-                            <constraint firstItem="ZrU-d6-rft" firstAttribute="width" secondItem="B6l-qU-gLX" secondAttribute="width" id="TEH-1Q-BTg"/>
+                            <constraint firstItem="ZrU-d6-rft" firstAttribute="width" secondItem="B6l-qU-gLX" secondAttribute="width" multiplier="0.5" id="TEH-1Q-BTg"/>
+                            <constraint firstItem="JwE-dp-ySR" firstAttribute="leading" secondItem="gZ1-ZV-kD5" secondAttribute="leading" id="Ung-Fu-0nb"/>
+                            <constraint firstItem="JwE-dp-ySR" firstAttribute="width" secondItem="B6l-qU-gLX" secondAttribute="width" multiplier="0.5" id="aCF-y5-aBc"/>
+                            <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="ZrU-d6-rft" secondAttribute="trailing" id="cuC-RB-nNM"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="bottom" secondItem="ZrU-d6-rft" secondAttribute="bottom" id="dhd-DB-uw9"/>
+                            <constraint firstItem="JwE-dp-ySR" firstAttribute="height" secondItem="ZrU-d6-rft" secondAttribute="height" id="ff4-qW-CIx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gZ1-ZV-kD5"/>
                     </view>
@@ -116,6 +128,38 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3521.739130434783" y="-564.50892857142856"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="LFR-aZ-Cdb">
+            <objects>
+                <viewController storyboardIdentifier="LogVC" id="0tP-Ez-h0K" customClass="LogViewController" customModule="ProximityAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kj9-cf-7ya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fw9-gG-kg0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fw9-gG-kg0" firstAttribute="centerY" secondItem="Zk3-Zn-T8q" secondAttribute="centerY" id="5IN-lj-8Wh"/>
+                            <constraint firstItem="Fw9-gG-kg0" firstAttribute="height" secondItem="Zk3-Zn-T8q" secondAttribute="height" id="Hlh-km-4h7"/>
+                            <constraint firstItem="Fw9-gG-kg0" firstAttribute="width" secondItem="kj9-cf-7ya" secondAttribute="width" id="LNl-1l-qYF"/>
+                            <constraint firstItem="Fw9-gG-kg0" firstAttribute="centerX" secondItem="Zk3-Zn-T8q" secondAttribute="centerX" id="ux9-Gv-Mnm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zk3-Zn-T8q"/>
+                    </view>
+                    <connections>
+                        <outlet property="loggingTextView" destination="Fw9-gG-kg0" id="K03-qv-KhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="En4-eA-5TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3461" y="249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s5N-fl-DMf">

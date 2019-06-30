@@ -12,6 +12,7 @@ import XCGLogger
 class Logger: NSObject {
 
     let log = XCGLogger(identifier: "advancedLogger", includeDefaultDestinations: false)
+    var loggingFileUrl: URL!
 
     static let shared = Logger()
 
@@ -30,9 +31,9 @@ class Logger: NSObject {
         // Add the destination to the logger
         log.add(destination: systemDestination)
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
-            let fileURL = dir.appendingPathComponent("logging.txt")
+            loggingFileUrl = dir.appendingPathComponent("logging.txt")
             // Create a file log destination
-            let fileDestination = FileDestination(writeToFile: fileURL, identifier: "advancedLogger.fileDestination", shouldAppend: true, appendMarker: "-- Relauched App --")
+            let fileDestination = FileDestination(writeToFile: loggingFileUrl!, identifier: "advancedLogger.fileDestination", shouldAppend: true, appendMarker: "-- Relauched App --")
             // Optionally set some configuration options
             fileDestination.outputLevel = .debug
             fileDestination.showLogIdentifier = false
