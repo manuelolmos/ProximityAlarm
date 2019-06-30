@@ -29,7 +29,11 @@ class Alarm: Codable {
         triggerDistance = distance
     }
 
+    func distanceToDestination(location: CLLocation) -> CLLocationDistance {
+        return location.distance(from: finalDestination)
+    }
+
     func shouldRing(location: CLLocation) -> Bool {
-        return location.distance(from: finalDestination) < Double(triggerDistance)
+        return distanceToDestination(location: location) < Double(triggerDistance)
     }
 }
