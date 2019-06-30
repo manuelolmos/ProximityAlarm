@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
-        triggerAlarmIfnecessary()
+        triggerAlarmIfNecessary()
         locationManager.start()
     }
 
@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         }
         actualAlarm = alarm
         addressSelected(placemark: MKPlacemark(coordinate: alarm.finalDestination.coordinate))
+        locationManager.start()
+        triggerAlarmIfNecessary()
     }
 
     private func setupUIComponents() {
@@ -92,7 +94,7 @@ class ViewController: UIViewController {
         locationSearchTable?.mapSearchDelegate = self
     }
 
-    private func triggerAlarmIfnecessary() {
+    private func triggerAlarmIfNecessary() {
         guard let currentLocation = locationManager.currentLocation,
             let alarm = actualAlarm else {
             return
@@ -101,6 +103,7 @@ class ViewController: UIViewController {
             soundPlayer.play()
             AlarmManager().delete(alarm)
             actualAlarm = nil
+            locationManager.stop()
         }
     }
 }
@@ -109,7 +112,7 @@ extension ViewController: LocationDelegate {
 
     func locationDidUpdate(region: MKCoordinateRegion) {
         mapView.setRegion(region, animated: true)
-        triggerAlarmIfnecessary()
+        triggerAlarmIfNecessary()
     }
 }
 
