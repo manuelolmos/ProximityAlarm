@@ -59,6 +59,16 @@ class ViewController: UIViewController {
         locationManager.start()
     }
 
+    @IBAction func cancelAlarm() {
+        guard let alarm = actualAlarm else {
+            return
+        }
+        AlarmManager().delete(alarm)
+        actualAlarm = nil
+        mapView.removeAnnotations(mapView.annotations)
+        locationManager.stop()
+    }
+
     private func restoreAlarmIfNecessary() {
         guard let alarm = AlarmManager().restore() else {
             return
@@ -101,9 +111,7 @@ class ViewController: UIViewController {
         }
         if alarm.shouldRing(location: currentLocation) {
             soundPlayer.play()
-            AlarmManager().delete(alarm)
-            actualAlarm = nil
-            locationManager.stop()
+            cancelAlarm()
         }
     }
 }

@@ -21,6 +21,15 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWF-XP-VpH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="597.5"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGl-sR-kdg">
+                                <rect key="frame" x="382" y="98" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OGl-sR-kdg" secondAttribute="height" multiplier="1:1" id="AHv-6s-ED0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0tP-Ez-h0K" kind="show" id="8LA-X7-6pN"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lad-MQ-aag">
                                 <rect key="frame" x="0.0" y="685.5" width="414" height="132.5"/>
                                 <subviews>
@@ -81,9 +90,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-dp-ySR">
                                 <rect key="frame" x="0.0" y="818" width="207" height="44"/>
-                                <state key="normal" title="Open Log"/>
+                                <state key="normal" title="Cancel Alarm"/>
                                 <connections>
-                                    <segue destination="0tP-Ez-h0K" kind="show" id="5cZ-Vk-eXw"/>
+                                    <action selector="cancelAlarm" destination="S7y-zK-eLr" eventType="touchUpInside" id="QgF-KZ-xeQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +100,7 @@
                         <constraints>
                             <constraint firstItem="JwE-dp-ySR" firstAttribute="centerY" secondItem="ZrU-d6-rft" secondAttribute="centerY" id="3mK-23-XfS"/>
                             <constraint firstItem="ZrU-d6-rft" firstAttribute="leading" secondItem="JwE-dp-ySR" secondAttribute="trailing" id="5rp-Ym-eWJ"/>
+                            <constraint firstItem="aWF-XP-VpH" firstAttribute="trailing" secondItem="OGl-sR-kdg" secondAttribute="trailing" constant="10" id="9Bm-qW-lj4"/>
                             <constraint firstItem="aWF-XP-VpH" firstAttribute="top" secondItem="gZ1-ZV-kD5" secondAttribute="top" id="AT4-I6-DyK"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="lad-MQ-aag" secondAttribute="trailing" id="Bsl-Ue-EhI"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="aWF-XP-VpH" secondAttribute="trailing" id="E03-xz-0If"/>
@@ -104,6 +114,8 @@
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="trailing" secondItem="ZrU-d6-rft" secondAttribute="trailing" id="cuC-RB-nNM"/>
                             <constraint firstItem="gZ1-ZV-kD5" firstAttribute="bottom" secondItem="ZrU-d6-rft" secondAttribute="bottom" id="dhd-DB-uw9"/>
                             <constraint firstItem="JwE-dp-ySR" firstAttribute="height" secondItem="ZrU-d6-rft" secondAttribute="height" id="ff4-qW-CIx"/>
+                            <constraint firstItem="OGl-sR-kdg" firstAttribute="top" secondItem="aWF-XP-VpH" secondAttribute="top" constant="10" id="w7N-pA-X1Y"/>
+                            <constraint firstItem="OGl-sR-kdg" firstAttribute="width" secondItem="B6l-qU-gLX" secondAttribute="width" multiplier="22/414" id="zMM-D5-9JE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gZ1-ZV-kD5"/>
                     </view>
